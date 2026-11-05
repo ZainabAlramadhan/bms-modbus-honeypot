@@ -1,0 +1,41 @@
+{
+  "identity": {
+    "vendor": "Falcon Building Systems",
+    "product_code": "FBS-BC200",
+    "revision": "3.4.1",
+    "model": "BC-200 Building Controller",
+    "site": "Tower A - Mechanical Room"
+  },
+  "unit_id": 1,
+  "holding_registers": [
+    {"address": 0,  "name": "Zone 1 temperature setpoint", "unit": "C",   "scale": 10, "value": 220, "safe_min": 160, "safe_max": 280},
+    {"address": 1,  "name": "Zone 2 temperature setpoint", "unit": "C",   "scale": 10, "value": 225, "safe_min": 160, "safe_max": 280},
+    {"address": 2,  "name": "Supply air setpoint",         "unit": "C",   "scale": 10, "value": 140, "safe_min": 100, "safe_max": 180},
+    {"address": 3,  "name": "AHU-1 fan speed",             "unit": "%",   "scale": 1,  "value": 65,  "safe_min": 20,  "safe_max": 100},
+    {"address": 4,  "name": "Chiller mode",                "unit": "",    "scale": 1,  "value": 1,   "safe_min": 0,   "safe_max": 2},
+    {"address": 5,  "name": "CO2 alarm threshold",         "unit": "ppm", "scale": 1,  "value": 1000,"safe_min": 600, "safe_max": 1500},
+    {"address": 10, "name": "Occupancy start hour",        "unit": "h",   "scale": 1,  "value": 7,   "safe_min": 0,   "safe_max": 23},
+    {"address": 11, "name": "Occupancy end hour",          "unit": "h",   "scale": 1,  "value": 19,  "safe_min": 0,   "safe_max": 23}
+  ],
+  "input_registers": [
+    {"address": 0, "name": "Zone 1 temperature",  "unit": "C",   "scale": 10, "value": 221, "jitter": 3},
+    {"address": 1, "name": "Zone 2 temperature",  "unit": "C",   "scale": 10, "value": 227, "jitter": 3},
+    {"address": 2, "name": "Supply air temperature", "unit": "C", "scale": 10, "value": 142, "jitter": 2},
+    {"address": 3, "name": "Zone 1 humidity",     "unit": "%",   "scale": 1,  "value": 45,  "jitter": 2},
+    {"address": 4, "name": "Zone 1 CO2",          "unit": "ppm", "scale": 1,  "value": 620, "jitter": 25},
+    {"address": 5, "name": "Building power",      "unit": "kW",  "scale": 1,  "value": 184, "jitter": 6}
+  ],
+  "coils": [
+    {"address": 0, "name": "AHU-1 fan run",          "value": true},
+    {"address": 1, "name": "Chiller enable",         "value": true},
+    {"address": 2, "name": "Lighting floor 1",       "value": true},
+    {"address": 3, "name": "Lighting floor 2",       "value": false},
+    {"address": 4, "name": "Fire damper override",   "value": false, "safety": true},
+    {"address": 5, "name": "Fire alarm silence",     "value": false, "safety": true}
+  ],
+  "discrete_inputs": [
+    {"address": 0, "name": "AHU-1 filter dirty",  "value": false},
+    {"address": 1, "name": "Smoke detector zone 1", "value": false},
+    {"address": 2, "name": "Door access fault",   "value": false}
+  ]
+}
